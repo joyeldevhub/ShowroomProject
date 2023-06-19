@@ -1,0 +1,65 @@
+package org.showroom;
+
+import java.util.Scanner;
+
+public class KtmBike extends Ktm{
+	String two = "KTM";
+	String four = "Yes";
+	String five = "No";
+	
+	public void bikeTwo() {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		if(two == "KTM") {
+			String a = "200";
+			String b = "250";
+			String c = "390";
+			System.out.println("Terrific preference!" );
+			System.out.println();
+			System.out.println("Jovi: Which Engine Specification do you like? \n * 200cc \n * 250cc \n * 390cc");
+			System.out.print("Jovi: Enter your Power: ");
+			String Engine = scan.nextLine();
+			System.out.println(Engine);
+			
+			if(Engine.equalsIgnoreCase(a)) {
+				System.out.println("Here your Power dragon...");
+				System.out.println();
+				System.out.println("Ideal decision!!");
+				super.duke200("KTM 200 Duke", 186000.00,"138 kmph", 35.0, 199.5, "Dark Galvano & Metallic Silver ");
+				System.out.println();
+				
+			}
+				
+				if(Engine.equalsIgnoreCase(b)) {
+					System.out.println("Here your Power dragon...");
+					System.out.println();
+					System.out.println("Top-notch option!!");
+					super.duke250(229000.00, "KTM 250 Duke", 248.8, "248 kmph", 30.8, "Orange & Silver");
+					System.out.println();
+			
+				}
+					
+					if(Engine.equalsIgnoreCase(c)) {
+						System.out.println("Here your Power dragon...");
+						System.out.println();
+						System.out.println("Prime pick!!");
+						super.duke390(28.9, "KTM 390 Duke", "167 kmph", 288000.00, 373.2, "Orange &  Factory Racing Blue");
+						System.out.println();
+		
+					}
+					
+					
+						
+		}	
+	}
+	
+	//main method
+	public static void main(String args[]) {
+		//object creation
+		KtmBike two = new KtmBike();
+		two.bikeTwo();
+		
+	}
+
+}

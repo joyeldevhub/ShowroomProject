@@ -1,0 +1,82 @@
+package org.showroom;
+
+import java.util.Scanner;
+
+public class Forms extends Count {
+	
+	String a = "Yes";
+	String b = "No";
+	
+	public void form() {	
+		
+		//pick your bike to fill the form
+		System.out.print("Jovi: Did you pick your Power(Yes / No) : ");	
+		Scanner scan1 = new Scanner(System.in);
+		String nextLine0 = scan1.nextLine();
+		if(nextLine0.equalsIgnoreCase(a)) {
+			System.out.println("* Jovi: Fill in this form to seize your savage beast *");
+			System.out.println();
+			this.one();
+		}
+		else {
+			System.out.println("Jovi: Grateful for your presence.");
+			
+		}
+	}
+		 public void one() {
+		
+		System.out.print("Jovi: Enter your Full Name: ");
+		Scanner scan = new Scanner(System.in);
+		String nextLine = scan.nextLine();
+		
+		System.out.print("Jovi: Enter your Phone Number: ");
+		long nextLong = scan.nextLong();
+		
+		System.out.print("Jovi: Enter Your Address: ");
+		String nextLine3 = scan.nextLine();
+		scan.nextLine();
+		
+		System.out.print("Jovi: Enter your Email: ");
+		String nextLine4 = scan.nextLine();		
+		
+		System.out.print("Jovi: Bike Name: ");
+		String nextLine2 = scan.nextLine();
+		
+		System.out.print("Jovi: Bike Colour: ");
+		String nextLine7 = scan.nextLine();
+		
+		super.timer();
+		this.drive();
+	}
+	
+	public void drive() {
+		Scanner scan2 = new Scanner(System.in);
+		System.out.print("Jovi: Do you want test drive (Yes / No): ");
+		String nextLine6 = scan2.nextLine();
+		
+		if(nextLine6.equalsIgnoreCase(a)) {
+			System.out.println("Jovi: Our Resource team will call you before you visit.." + 
+		"\n Thank You Rider!");
+			System.out.println("*** Your form will be Submitted ***");
+		}
+		else {
+			System.out.println("Jovi: Okay, No Problem. Thank You!");
+			System.out.println("*** Your form will be Submitted ***");
+		}	
+		System.out.println();
+
+		
+	}
+		
+		
+	//main method
+	public static void main(String args[]) {
+		//object creation
+		Forms add = new Forms();
+		//yesadd.drive();
+		add.form();
+		
+		
+	}
+
+}

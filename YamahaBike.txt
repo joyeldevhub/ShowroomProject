@@ -1,0 +1,65 @@
+package org.showroom;
+
+import java.util.Scanner;
+
+public class YamahaBike extends Yamaha {
+	
+	String one = "Yamaha";
+	String four = "Yes";
+	String five = "No";
+	public void bikeOne() {
+		Scanner scan = new Scanner(System.in);
+//		String string = scan.nextLine();
+//		System.out.println(string);	
+		
+		if(one == "Yamaha") {
+			String a = "125";
+			String b = "155";
+			String c = "250";
+			System.out.println("Admirable pick!" );
+			System.out.println();
+			System.out.println("Jovi: Which Engine Specification do you like? \n * 125 cc \n * 155 cc \n * 250 cc");
+			System.out.print("Jovi: Enter your Power: ");
+			String YaEngine = scan.nextLine();
+			System.out.println(YaEngine);
+			
+			if(YaEngine.equalsIgnoreCase(b)) {
+				System.out.println("Here your Power dragons...");
+				System.out.println();
+				System.out.println("Model No.1");
+				super.r15m("Yamaha R15M", 194400.00, "150 kmph", 40.5, 155, "Thunder Grey, Metallic White & Racing Blue");
+				System.out.println();
+				System.out.println("Model No.2");
+				super.aerox(143000.00, "Yamaha Aerox 155", 155, "120 kmph", 45.0, "Metallic Black, Grey vermillion & Silver");
+				System.out.println();
+				System.out.println("Model No.3");
+				super.mt(46.0, "Yamaha MT 15 V2", "130 kmph", 165000.00, 155, "Cyan Storm, Ice Fluo-vermillion & Dark Matte Blue");
+				System.out.println();
+				
+				
+			}
+				
+				if(YaEngine.equalsIgnoreCase(a)) {
+					System.out.println("Here your Power dragon...");
+					System.out.println();
+					System.out.println("Preferred pick!!");
+					super.saluto("Yamaha Saluto", 61836.00, 78.0, 125, "98 kmph", "Victory Red, Brave Black & Glory Green");
+					System.out.println();					
+					
+				}
+				if(YaEngine.equalsIgnoreCase(c)) {
+					System.out.println("Jovi: Sorry, currently not available.");
+					//this.specs();
+				}		
+		}
+	}
+	//main method
+	public static void main(String args[]) {
+		//object creation
+		YamahaBike one = new YamahaBike();
+		Showroom show = new Showroom();	
+		one.bikeOne();
+		
+	}
+
+}

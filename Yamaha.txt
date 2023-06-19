@@ -1,0 +1,57 @@
+package org.showroom;
+
+public class Yamaha  {
+	
+	public void r15m(String name, double price, String speed, double mileage, double engine, String color) {
+		System.out.println("Name      : "+name);
+		System.out.println("Engine    : "+engine+ " cc");
+		System.out.println("Top Speed : "+speed);
+		System.out.println("Mileage   : "+mileage+" km/l");
+		System.out.println("Colours   : "+color);
+		System.out.println("Price     : Rs."+price+" * onward");
+		System.out.println();		
+	}
+	
+	public void aerox(double price, String name, double engine, String speed, double mileage, String color) {
+		System.out.println("Name      : "+name);
+		System.out.println("Engine    : "+engine+ " cc");
+		System.out.println("Top Speed : "+speed);
+		System.out.println("Mileage   : "+mileage+" km/l");
+		System.out.println("Colours   : "+color);
+		System.out.println("Price     : Rs."+price+" * onward");
+		System.out.println();		
+	}
+	
+	public void mt(double mileage, String name, String speed, double price, double engine, String color) {
+		System.out.println("Name      : "+name);
+		System.out.println("Engine    : "+engine+ " cc");
+		System.out.println("Top Speed : "+speed);
+		System.out.println("Mileage   : "+mileage+" km/l");
+		System.out.println("Colours   : "+color);
+		System.out.println("Price     : Rs."+price+" * onward");
+		System.out.println();
+	}	
+	
+	public void saluto(String name, double price,double mileage, double engine,String speed, String color) {
+		System.out.println("Name      : "+name);
+		System.out.println("Engine    : "+engine+ " cc");
+		System.out.println("Top Speed : "+speed);
+		System.out.println("Mileage   : "+mileage+" km/l");
+		System.out.println("Colours   : "+color);
+		System.out.println("Price     : Rs."+price+" * onward");
+		System.out.println();
+	}
+	
+	//main method
+	public static void main(String args[]) {
+		//object creation
+		Yamaha detail = new Yamaha();
+		detail.r15m("Yamaha R15M", 194400.00, "150 kmph", 40.5, 155, "Thunder Grey, Metallic White & Racing Blue");
+		detail.aerox(143000.00, "Yamaha Aerox 155", 155, "120 kmph", 45.0, "Metallic Black, Grey vermillion & Silver");
+		detail.mt(46.0, "Yamaha MT 15 V2", "130 kmph", 165000.00, 155, "Cyan Storm, Ice Fluo-vermillion & Dark Matte Blue");
+		detail.saluto("Yamaha Saluto", 61836.00, 78.0, 125, "98 kmph", "Victory Red, Brave Black & Glory Green");
+		
+		Yamaha detail2 = detail;
+	}
+
+}

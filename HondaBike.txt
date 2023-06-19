@@ -1,0 +1,65 @@
+package org.showroom;
+
+import java.util.Scanner;
+
+public class HondaBike extends Honda {
+	String three = "Honda";
+	String four = "Yes";
+	String five = "No";
+	
+	public void bikeThree() {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		if(three == "Honda") {
+			String a = "110";
+			String b = "350";
+			String c = "650";
+			System.out.println("Outstanding pick!" );
+			System.out.println();
+			System.out.println("Jovi: Which Engine Specification do you like? \n * 110cc \n * 350cc \n * 650cc");
+			System.out.print("Jovi: Enter your Power: ");
+			String Engine = scan.nextLine();
+			System.out.println(Engine);
+			
+			if(Engine.equalsIgnoreCase(a)) {
+				System.out.println("Here your Power dragon...");
+				System.out.println();
+				System.out.println("Superior choice!!");
+				super.dio(55, "Honda Dio", "83 kmph", 68625.00, 109.51, "Sports Red, Mat Sangria Red Metallic & Mat Sangria Red Metallic");
+				System.out.println();
+				
+	
+			
+		    }
+			
+			if(Engine.equalsIgnoreCase(b)) {
+				System.out.println("Here your Power dragon...");
+				System.out.println();
+				System.out.println("Best preference!!");
+				super.hness("Honda H'ness CB350", 210000.00, "125 kmph", 45.8, 348.36, "Pearl Nightstar Black, Athletic Blue Metallic &  Mat Marshall Green Metallic");
+				System.out.println();
+	
+			}
+			
+			if(Engine.equalsIgnoreCase(c)) {
+				System.out.println("Here your Power dragon...");
+				System.out.println();
+				System.out.println("Premium pick!!");
+				super.cBR(889000.00, "Honda CBR650R", 648.72, "240 kmph", 23.25, "Black Metallic, Grand Prix Red & Candy Chromosphere Red");
+				System.out.println();
+				
+	
+			}
+			
+		}
+		
+	}
+	//main method
+	public static void main(String args[]) {
+		//object creation
+		HondaBike three = new HondaBike();
+		three.bikeThree();
+	}
+
+}

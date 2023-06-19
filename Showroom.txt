@@ -1,0 +1,81 @@
+package org.showroom;
+import java.util.Scanner;
+
+public class Showroom extends Forms {
+	String one = "Yamaha";
+	String two = "KTM";
+	String three = "Honda";
+	
+	private void room() {
+	System.out.println("Jovi: Hello, Am Jovi.");
+	Scanner scanner = new Scanner(System.in);
+	
+	String wheelsBanner = 
+            "  __        __   _                            \n" +
+            "  \\ \\      / /__| | ___ ___  _ __ ___   ___   \n" +
+            "   \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ \n" +
+            "    \\ V  V /  __/ | (_| (_) | | | | | |  __/ \n" +
+            "     \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|! \n";
+        
+        // Print the "Wheels" banner
+        System.out.println(wheelsBanner);
+	
+	System.out.println("Our showroom awaits you, offering simplicity at its best.");
+	String nextLine = scanner.nextLine();
+	System.out.println("Jovi: We have some Brands like: \n * KTM \n * Yamaha \n * Honda");
+	System.out.println();
+	
+	this.common();
+	}
+	
+	private void common() {			
+	Scanner scan = new Scanner(System.in);	
+	System.out.print("Jovi: Which Brand do you like? ");
+	String string = scan.nextLine();
+	System.out.println(string);	
+	if(one.equalsIgnoreCase(string)) {
+		this.row1();
+		
+	}	
+	
+	if(two.equalsIgnoreCase(string)) {
+		this.row2();
+	}
+		
+	if(three.equalsIgnoreCase(string)) {
+		this.row3();
+	}
+	
+	
+	
+	}
+	
+	private void row1() {	
+		super.bikeOne();
+		super.form();
+		
+	}
+	
+	private void row2() {
+		super.bikeTwo();
+		super.form();
+		
+	}
+	
+	private void row3() {
+		super.bikeThree();
+		super.form();
+		
+		
+	}
+	
+	
+	//main method
+	public static void main(String args[]) {
+		//object creation
+		Showroom show = new Showroom();		
+		show.room();
+//		show.row1();
+	}
+
+}
